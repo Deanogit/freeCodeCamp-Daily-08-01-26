@@ -23,28 +23,40 @@
 //   // return arr;
 // }
 
-function isSorted(arr) {
-  // console.log(arr)
+// function isSorted(arr) {
+//   // console.log(arr)
 
+//   let isAsc = true;
+//   let isDesc = true;
+
+//   for (let i = 0; i < arr.length - 1; i++) {
+//     // acending
+//     if (arr[i] >= arr[i + 1]) {
+//       isAsc = false;
+//     }
+
+//     // descending
+//     if (arr[i] <= arr[i + 1]) isDesc = false;
+//   }
+
+//   if (!isAsc && !isDesc) return 'Not sorted';
+//   else if (isAsc) return 'Ascending';
+//   else return 'Descending';
+
+//   // if (arr[i] < arr[i + 1]) {
+//   // return
+//   // }
+//   // return arr;
+// }
+
+function isSorted(arr) {
   let isAsc = true;
   let isDesc = true;
 
   for (let i = 0; i < arr.length - 1; i++) {
-    // acending
-    if (arr[i] >= arr[i + 1]) {
-      isAsc = false;
-    }
-
-    // descending
+    if (arr[i] >= arr[i + 1]) isAsc = false;
     if (arr[i] <= arr[i + 1]) isDesc = false;
   }
 
-  if (!isAsc && !isDesc) return 'Not sorted';
-  else if (isAsc) return 'Ascending';
-  else return 'Descending';
-
-  // if (arr[i] < arr[i + 1]) {
-  // return
-  // }
-  // return arr;
+  return isAsc ? 'Ascending' : isDesc ? 'Descending' : 'Not Sorted';
 }
