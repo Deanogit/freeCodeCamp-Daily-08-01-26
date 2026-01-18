@@ -6,3 +6,19 @@
 // In ascending order (lowest to highest), return "Ascending".
 // In descending order (highest to lowest), return "Descending".
 // Not sorted in ascending or descending order, return "Not sorted".
+
+function isSorted(arr) {
+  // console.log(arr)
+
+  for (let i = 0; i < arr.length; i++) {
+    // acending
+    if (arr[i] < arr[i + 1]) {
+      return 'Ascending';
+    }
+  }
+
+  // if (arr[i] < arr[i + 1]) {
+  // return
+  // }
+  // return arr;
+}
